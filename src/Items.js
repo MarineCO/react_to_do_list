@@ -1,4 +1,5 @@
 var React = require('react');
+import Form from './Form';
 
 class Items extends React.Component {
 	constructor(props) {
@@ -30,6 +31,7 @@ class Items extends React.Component {
 		});
 		return (
 			<div>
+				<Form onSubmit={this.handleSubmit} />
 				<ul>{ listItems }</ul>
 			</div>
 		);

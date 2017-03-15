@@ -9,20 +9,31 @@ class Form extends React.Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
+
 	handleChange(event) {
 		this.setState({value: event.target.value});
 	}
 
 	handleSubmit(event) {
-		console.log(this.state.value);
+		console.log(this.itemInput.value);
 		event.preventDefault();
+		const newContent = this.itemInput.value;
+		const newItem = {
+			date: Date.now(),
+			content: newContent
+		}
+		console.log(newItem);
+
+		let myNewItems = Object.assign([], this.state.items);
+		myNewItems.push(newItem);
+		console.log(myNewItems);
 	}
 
 	render() {
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<label></label>
-				<input type="text" value={this.state.value} onChange={this.handleChange} />
+				<input ref={input => this.itemInput = input} name="item" type="text" onChange={this.handleChange} />
 				<input type="submit" value="Add an item" />
 			</form>
 		);

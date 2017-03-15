@@ -7,19 +7,19 @@ class Items extends React.Component {
 			items: [
 				{
 					id:1,
-					content:"Travailler React"
+					content:"Work React"
 				},
 				{
 					id:2,
-					content:"Travailler React"
+					content:"Work React"
 				},
 				{
 					id:3,
-					content:"Travailler React"
+					content:"Work React"
 				},
 				{
 					id:4,
-					content:"Travailler React"
+					content:"Work React"
 				}
 			]
 		}
@@ -36,4 +36,4 @@ class Items extends React.Component {
 	}
 }
 
-export default Items
+export default Items;
